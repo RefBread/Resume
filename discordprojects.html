@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Discord Projects – RefBread</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ff0033;
+      --background: #0b0b0d;
+      --text: #f5f5f5;
+      --button-hover: #ff334d;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: url('background.png') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text);
+      min-height: 100vh;
+      text-align: center;
+      backdrop-filter: brightness(0.9);
+    }
+
+    header {
+      padding: 2em 1em 1em;
+    }
+
+    h1 {
+      font-size: 4em;
+      color: var(--primary);
+      text-shadow: 0 0 25px var(--primary);
+      margin: 0;
+    }
+
+    p.subtitle {
+      font-size: 1.3em;
+      color: #aaa;
+      margin-top: 0.5em;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 4em auto;
+      padding: 2em;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 16px;
+      box-shadow: 0 0 15px var(--primary);
+      text-align: left;
+    }
+
+    .section h2 {
+      font-size: 2em;
+      color: var(--primary);
+      margin-bottom: 0.5em;
+    }
+
+    .section p {
+      font-size: 1.2em;
+      color: #ddd;
+    }
+
+    .server-entry {
+      display: flex;
+      gap: 2em;
+      align-items: center;
+      margin-top: 2em;
+      flex-wrap: wrap;
+    }
+
+    .server-entry img {
+      width: 150px;
+      height: 150px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 0 10px var(--primary);
+    }
+
+    .server-info {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .server-info h3 {
+      color: #fff;
+      margin-bottom: 0.5em;
+    }
+
+    .server-info p {
+      color: #ccc;
+      font-size: 1em;
+      margin: 0.2em 0;
+    }
+
+    .btn-back {
+      margin: 4em auto 2em;
+      display: inline-block;
+      padding: 1em 2.5em;
+      font-size: 1.2em;
+      color: var(--text);
+      border: 2px solid var(--primary);
+      text-decoration: none;
+      border-radius: 10px;
+      box-shadow: 0 0 10px var(--primary);
+      transition: 0.3s;
+    }
+
+    .btn-back:hover {
+      background-color: var(--primary);
+      color: #000;
+      box-shadow: 0 0 20px var(--button-hover);
+    }
+
+    @media (max-width: 768px) {
+      .server-entry {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .server-entry img {
+        margin-bottom: 1em;
+      }
+
+      .section {
+        margin: 2em 1em;
+      }
+
+      h1 {
+        font-size: 3em;
+      }
+    }
+    .server-link {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .server-link:hover {
+      color: #ff6680; /* lighter red on hover */
+      text-decoration: underline;
+    }
+
+  </style>
+  <script>
+  function calculateTimeSince(startDateStr) {
+    const startDate = new Date(startDateStr);
+    const now = new Date();
+
+    let years = now.getFullYear() - startDate.getFullYear();
+    let months = now.getMonth() - startDate.getMonth();
+
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+
+    let result = "";
+    if (years > 0) result += `${years} year${years > 1 ? 's' : ''}`;
+    if (years > 0 && months > 0) result += ", ";
+    if (months > 0) result += `${months} month${months > 1 ? 's' : ''}`;
+    return result || "Less than a month";
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-start]').forEach(el => {
+      const start = el.getAttribute('data-start');
+      const timeSince = calculateTimeSince(start);
+      el.textContent = `📅 Time as Staff: ${timeSince}`;
+    });
+  });
+</script>
+</head>
+<body>
+  <header>
+    <h1>My Discord Projects</h1>
+    <p class="subtitle">Bots • Staff Work • Referee Experience</p>
+  </header>
+
+  <div class="section">
+    <h2>Bot Development</h2>
+    <p>I create and manage custom Discord bots tailored for gaming communities — from livestream code distribution and community moderation to fun, interactive projects that engage users.</p>
+
+    <div class="server-entry">
+      <img src="LIVE CODES BOT.png" alt="Bot 1">
+      <div class="server-info">
+        <h3>TTT Livestream Codes</h3>
+        <p>The TTT Livestream Bot is a custom-built control panel bot for Gorilla Tag that manages sending fan lobby codes during livestreams. It allows managers to input a code and instantly distribute it to team members, livestream hosts, and verified donors. It also keeps track of donations, ensuring supporters receive early or exclusive access to lobbies.</p>
+      </div>
+    </div>
+
+    <div class="server-entry">
+      <img src="ODMG bot.png" alt="Bot 2">
+      <div class="server-info">
+        <h3>ODMG Manager | Orion Drift Mini Games</h3>
+        <p>The ODMG Manager is a multi-purpose bot designed specifically for the ODMG Community Discord server. It includes a full-featured ticket system, moderation tools, event management capabilities, and more — all built to streamline server operations and enhance community engagement.</p>
+      </div>
+    </div>
+
+    <div class="server-entry">
+      <img src="🍞.png" alt="Bot 3">
+      <div class="server-info">
+        <h3>Bread Bot</h3>
+        <p>One of my Fun Projects</p>
+        <p>Reacts with a 🍞 Emoji, when someone mentions the word "Bread"</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Staff / Moderation</h2>
+    <p>I contribute as staff and helper in major Gorilla Tag communities, supporting over 280,000 members combined by assisting with moderation, events, and community management.</p>
+
+    <div class="server-entry">
+      <img src="GTC.png" alt="Server 1">
+      <div class="server-info">
+      <h3><a href="https://discord.gg/gorillatagcomp" class="server-link">GTC | Gorilla Tag Competitive</a></h3>
+        <p>👥 236K Members</p>
+        <p>🔧 Role: Helper</p>
+        <p data-start="2025-05-25">📅 Time as Staff: </p>
+      </div>
+    </div>
+
+    <div class="server-entry">
+      <img src="CGT.png" alt="Server 2">
+      <div class="server-info">
+      <h3><a href="https://discord.gg/compgorillatag" class="server-link">CGT |  Competitive Gorilla Tag</a></h3>
+        <p>👥47K Members</p>
+        <p>🔧 Role: Helper</p>
+        <p data-start="2025-05-25">📅 Time as Staff: </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Referee Experience</h2>
+    <p>Starting as a casual player, I discovered my passion for refereeing after stepping in for a public scrim. Through dedication and experience, I quickly advanced and now proudly serve as the Head Referee for CGT.</p>
+
+    <div class="server-entry">
+      <img src="CGT.png" alt="Ref 1">
+      <div class="server-info">
+      <h3><a href="https://discord.gg/compgorillatag" class="server-link">CGT |  Competitive Gorilla Tag</a></h3>
+        <p>I started out in Gorilla Tag as just another unknown player, unaware of the competitive scene. One day, I was unexpectedly asked to referee a public scrim — and to my surprise, I enjoyed it. That moment sparked something, and I began actively seeking out more scrims to ref. With each match, my skills grew, and I built a reputation within the community. Just a few months later, I was invited to become the Head Referee for CGT — a huge opportunity that I proudly accepted.</p>
+      </div>
+    </div>
+  </div>
+
+  <a href="online.html" class="btn-back">← Back to Online Life</a>
+</body>
+</html>

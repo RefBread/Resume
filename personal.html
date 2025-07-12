@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Life – RefBread</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ff0033;
+      --background: #0b0b0d;
+      --text: #f5f5f5;
+      --button-hover: #ff334d;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: url('background.png') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text);
+      min-height: 100vh;
+      text-align: center;
+      backdrop-filter: brightness(0.9);
+    }
+
+    header {
+      padding: 2em 1em 1em;
+    }
+
+    h1 {
+      font-size: 4em;
+      color: var(--primary);
+      text-shadow: 0 0 25px var(--primary);
+      margin: 0;
+    }
+
+    p.subtitle {
+      font-size: 1.3em;
+      color: #aaa;
+      margin-top: 0.5em;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin: 3em auto;
+      max-width: 1000px;
+      padding: 1em;
+      gap: 2em;
+    }
+
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .section img {
+      width: 300px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px var(--primary);
+    }
+
+    .section .info {
+      flex: 1;
+      min-width: 250px;
+      font-size: 1.3em;
+      color: #ddd;
+      text-align: left;
+    }
+
+    .btn-back {
+      margin: 4em auto 2em;
+      display: inline-block;
+      padding: 1em 2.5em;
+      font-size: 1.2em;
+      color: var(--text);
+      border: 2px solid var(--primary);
+      text-decoration: none;
+      border-radius: 10px;
+      box-shadow: 0 0 10px var(--primary);
+      transition: 0.3s;
+    }
+
+    .btn-back:hover {
+      background-color: var(--primary);
+      color: #000;
+      box-shadow: 0 0 20px var(--button-hover);
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column !important;
+        text-align: center;
+      }
+
+      .section .info {
+        text-align: center;
+        font-size: 1.1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Personal Life</h1>
+    <p class="subtitle">A glimpse into who I am beyond the screen.</p>
+  </header>
+
+  <!-- Example Activity 1 -->
+  <div class="section">
+    <img src="image.png" alt="Activity 1">
+    <div class="info">
+      <h2>Music</h2>
+      <p>Music has always been a big part of my life, and over the years I’ve learned to play five different instruments: drums, guitar, bass, piano, and a bit of ukulele. Each one has taught me something unique about rhythm, melody, and creativity. I love experimenting with new sounds and blending styles across instruments. My goal is to keep expanding my musical knowledge — not just improving my current skills, but also picking up even more instruments in the future. I see music as a lifelong journey, and I’m excited to keep exploring everything it has to offer.</p>
+    </div>
+  </div>
+
+  <!-- Example Activity 2 -->
+  <div class="section">
+    <img src="image0.jpeg" alt="Activity 2">
+    <div class="info">
+      <h2>Church</h2>
+      <p>I’ve been a part of my church for about four years now, and it’s been one of the most meaningful experiences in my life. Over that time, I’ve served in several roles — as the administrator’s assistant, managing audio and streaming software, and playing drums on the worship team for the past three years. These roles have taught me the importance of teamwork, communication, and serving others with purpose. Being involved in church has also deepened my relationship with Jesus, helping me grow in faith, humility, and leadership. It’s more than just volunteering — it’s a core part of who I am and how I live out my values every day.</p>
+    </div>
+  </div>
+
+  <!-- Example Activity 3 -->
+  <div class="section">
+    <img src="image 3.png" alt="Activity 3">
+    <div class="info">
+      <h2>Martial Arts</h2>
+      <p>I’ve been practicing Tae Kwon Do for over 7 years, and I currently hold a brown belt. I’m still active and steadily moving up the ranks. As an upper belt, I’ve taken on more responsibility in the dojang, often helping guide and support lower-ranked students. Through this, I’ve developed a strong sense of leadership, patience, and discipline. Tae Kwon Do has taught me the value of self-control — both mentally and physically — and the importance of perseverance, even when progress feels slow. It’s not just about physical skill; it’s a mindset I carry with me in everything I do.</p>
+    </div>
+  </div>
+
+  <!-- Example Activity 4 -->
+  <div class="section">
+    <img src="imagepc.png" alt="Activity 4">
+    <div class="info">
+      <h2>Tech</h2>
+      <p>I’ve been a tech enthusiast for as long as I can remember — the kind of kid who would take apart my mom’s old phones just to see how they worked. That curiosity grew into a real passion for technology, especially when it comes to computer hardware. Over the years, I’ve taught myself how to build and repair PCs, and I’ve successfully built two machines of my own. Whether I’m troubleshooting issues, upgrading components, or helping others with their setups, I’m always learning something new. Working with technology isn’t just a hobby for me — it’s a genuine passion that keeps pushing me to grow and explore more in the tech world.</p>
+    </div>
+  </div>
+
+  <a href="index.html" class="btn-back">← Back to Home</a>
+</body>
+</html>
